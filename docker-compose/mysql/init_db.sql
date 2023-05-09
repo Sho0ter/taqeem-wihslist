@@ -1,0 +1,1 @@
+create schema `wishlist_db`;
