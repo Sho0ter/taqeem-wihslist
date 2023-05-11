@@ -14,23 +14,23 @@ services:
     volumes:
       - ./:/var/www
     networks:
-      - wishlist
+      - wishlist-network
 
   db:
     image: mysql:8.0
     container_name: wishlist-db
     restart: unless-stopped
+    ports:
+      - 3366:3306
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_USER: ${DB_USERNAME}
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
     volumes:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
-      - wishlist
+      - wishlist-network
 
   nginx:
     image: nginx:alpine
@@ -42,7 +42,7 @@ services:
       - ./:/var/www
       - ./docker-compose/nginx:/etc/nginx/conf.d/
     networks:
-      - wishlist
+      - wishlist-network
 
   phpmyadmin:
     depends_on:
@@ -58,8 +58,8 @@ services:
     links:
       - db    
     networks:
-      - wishlist
+      - wishlist-network
 
 networks:
-  wishlist:
+  wishlist-network:
     driver: bridge
