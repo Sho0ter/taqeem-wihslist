@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'api', 'prefix' => 'auth'], function ($router) {
     Route::post('/signup', [SignupController::class, 'signup'])->name('auth.signup');
     Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
-    Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+    Route::delete('/logout', [AuthController::class, 'logout'])->name('auth.logout');
     Route::post('/refresh', [AuthController::class, 'refresh'])->name('auth.refresh');
-    Route::post('me', [AuthController::class, 'me'])->name('auth.me');
+    Route::get('me', [AuthController::class, 'me'])->name('auth.me');
 });
 
 Route::group(['middleware' => 'auth:api'], function ($router) {
@@ -30,6 +30,6 @@ Route::group(['middleware' => 'auth:api'], function ($router) {
 });
 
 Route::group(['middleware' => 'auth:api', 'prefix' => 'items/statistics'], function ($router) {
-    Route::get('total_price', [ItemStatisticController::class, 'total_price'])->name('items.statistics.total_price');
-    Route::get('average_price', [ItemStatisticController::class, 'average_price'])->name('items.statistics.average_price');
+    Route::get('total-price', [ItemStatisticController::class, 'total_price'])->name('items.statistics.total_price');
+    Route::get('average-price', [ItemStatisticController::class, 'average_price'])->name('items.statistics.average_price');
 });
