@@ -24,14 +24,14 @@
 									}
 								],
 								"url": {
-									"raw": "{{local_url}}/items/statistics/total_price",
+									"raw": "{{local_url}}/items/statistics/total-price",
 									"host": [
 										"{{local_url}}"
 									],
 									"path": [
 										"items",
 										"statistics",
-										"total_price"
+										"total-price"
 									]
 								}
 							},
@@ -122,14 +122,14 @@
 									}
 								],
 								"url": {
-									"raw": "{{local_url}}/items/statistics/average_price",
+									"raw": "{{local_url}}/items/statistics/average-price",
 									"host": [
 										"{{local_url}}"
 									],
 									"path": [
 										"items",
 										"statistics",
-										"average_price"
+										"average-price"
 									]
 								}
 							},
@@ -686,7 +686,13 @@
 					"name": "SignUp",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"name\" : \"abdalla\",\n    \"email\" : \"abdalla@gmail.com\",\n    \"password\" : \"123456\"\n}",
@@ -862,7 +868,13 @@
 					"name": "Login",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{local_url}}/auth/login?email=test@wishlist.com&password=123456789",
 							"host": [
@@ -1116,7 +1128,7 @@
 				{
 					"name": "Logout",
 					"request": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [
 							{
 								"key": "Accept",
@@ -1308,7 +1320,7 @@
 				{
 					"name": "Me",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
@@ -1409,7 +1421,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6MzAwMFwvYXBpXC9hdXRoXC9yZWZyZXNoIiwiaWF0IjoxNjgzOTA1OTA4LCJleHAiOjE2ODM5MDk2MDgsIm5iZiI6MTY4MzkwNjAwOCwianRpIjoiZkNobWNxNXhqUGNScENDVyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jqHGSaidqxGM1LxgaOi6hxWIHaoPY0eN7yeYTxzRtHE",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6MzAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY4MzkxNDczNiwiZXhwIjoxNjgzOTE4MzM2LCJuYmYiOjE2ODM5MTQ3MzYsImp0aSI6ImVUSkFyN0Z6MmxsMVcwZjIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.aeyO-3OCrEg1ALapNL5NCvsbO29b05x9u1oVTum5fIc",
 				"type": "string"
 			}
 		]
