@@ -10,11 +10,15 @@
 
 4. RUN `docker-compose exec app bash`
 
-5. RUN `CD ./backend/wishlist/`
+5. RUN `cd ./backend/wishlist/`
 
-6. RUN `php artisan key:generate`
+6. RUN `cp .env.example .env`
 
-7. RUN `php artisan migrate:fresh --seed`
+7. RUN `composer update`
+
+8. RUN `php artisan key:generate`
+
+9. RUN `php artisan migrate:fresh --seed`
 
 ## usage
 
