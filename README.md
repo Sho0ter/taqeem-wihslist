@@ -1,4 +1,4 @@
-## taqeem-wihslist
+## taqeem-wishlist
 
 ## Installation
 
