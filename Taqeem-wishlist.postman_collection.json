@@ -1,0 +1,1444 @@
+{
+	"info": {
+		"_postman_id": "94f3ee98-563d-4c11-8227-adf7e351b930",
+		"name": "Taqeem-wishlist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4282240"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Statisitc",
+					"item": [
+						{
+							"name": "TotalPriceCurrnetMonth",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}/items/statistics/total_price",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"items",
+										"statistics",
+										"total_price"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{local_url}}/api/items/statistics/total_price",
+											"host": [
+												"{{local_url}}"
+											],
+											"path": [
+												"api",
+												"items",
+												"statistics",
+												"total_price"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.23.3"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.33"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 12 May 2023 14:36:41 GMT"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"value\": \"106,146.48\",\n        \"type\": \"items_total_price\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "AveragePrice",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}/items/statistics/average_price",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"items",
+										"statistics",
+										"average_price"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local_url}}/api/items/statistics/average_price",
+											"host": [
+												"{{local_url}}"
+											],
+											"path": [
+												"api",
+												"items",
+												"statistics",
+												"average_price"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.23.3"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.33"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 12 May 2023 14:36:56 GMT"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"value\": \"524.80\",\n        \"type\": \"items_average_price\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Store",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"product\",\n    \"seller\" : \"mohamed\",\n    \"price\" : 15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/items",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"product\",\n    \"seller\" : \"mohamed\",\n    \"price\" : 15\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/api/items",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"items"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:21:52 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 206,\n        \"name\": \"product\",\n        \"seller\": \"mohamed\",\n        \"price\": \"15.00\",\n        \"created_at\": \"2023-05-12T14:21:52.000000Z\",\n        \"updated_at\": \"2023-05-12T14:21:52.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "Unprocessable Content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"product\",\n    \"seller\" : \"mohamed\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/api/items",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"items"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:22:25 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"price\": [\n            \"The price field is required.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}/items",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"items"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2",
+									"description": "optional Parameter",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}/api/items",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"items"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2",
+											"description": "optional Parameter",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:23:46 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Mr. Lance Haag V\",\n            \"seller\": \"Dr. Daisy Weissnat III\",\n            \"price\": \"131.76\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Lenore Buckridge Jr.\",\n            \"seller\": \"Ms. Kailee Gleason\",\n            \"price\": \"886.09\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Mrs. Antonietta DuBuque DVM\",\n            \"seller\": \"Antonia Prosacco\",\n            \"price\": \"909.00\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Elroy Champlin\",\n            \"seller\": \"Rudy Ryan\",\n            \"price\": \"633.24\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Geoffrey Marquardt\",\n            \"seller\": \"Juwan Lueilwitz MD\",\n            \"price\": \"981.66\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Edwardo Hintz IV\",\n            \"seller\": \"Wilton Smith\",\n            \"price\": \"452.52\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Federico Homenick\",\n            \"seller\": \"Prof. Tommie Tromp\",\n            \"price\": \"120.00\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Ms. Darby Hilpert\",\n            \"seller\": \"Prof. Godfrey Ernser I\",\n            \"price\": \"349.40\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Dr. Amalia Lehner\",\n            \"seller\": \"Sabrina Bartell Sr.\",\n            \"price\": \"859.50\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Odessa Eichmann\",\n            \"seller\": \"Mrs. Skyla Jenkins\",\n            \"price\": \"880.31\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Catalina Weissnat\",\n            \"seller\": \"Savanah Kertzmann\",\n            \"price\": \"918.40\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Dr. Emil Kshlerin\",\n            \"seller\": \"Mr. Fritz Metz\",\n            \"price\": \"625.62\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Noemy West I\",\n            \"seller\": \"Margarett Rohan\",\n            \"price\": \"393.00\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Terrill Stark I\",\n            \"seller\": \"Zora McCullough\",\n            \"price\": \"102.17\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Dr. Bernard Wuckert IV\",\n            \"seller\": \"Dr. Marion Willms V\",\n            \"price\": \"713.50\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Mittie Leffler DDS\",\n            \"seller\": \"Ruben Littel\",\n            \"price\": \"744.63\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Dr. Caterina Kuphal Jr.\",\n            \"seller\": \"Joanie Corwin\",\n            \"price\": \"616.93\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Cortez Predovic\",\n            \"seller\": \"Ephraim Haag\",\n            \"price\": \"690.55\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Carter Senger\",\n            \"seller\": \"Carmen Schuppe\",\n            \"price\": \"880.23\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Shea Dach\",\n            \"seller\": \"Prof. Amya Collier\",\n            \"price\": \"364.50\",\n            \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n            \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:3000/api/items?page=1\",\n        \"last\": \"http://localhost:3000/api/items?page=11\",\n        \"prev\": null,\n        \"next\": \"http://localhost:3000/api/items?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 11,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=7\",\n                \"label\": \"7\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=8\",\n                \"label\": \"8\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=9\",\n                \"label\": \"9\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=10\",\n                \"label\": \"10\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=11\",\n                \"label\": \"11\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3000/api/items?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:3000/api/items\",\n        \"per_page\": 20,\n        \"to\": 20,\n        \"total\": 207\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/items/:id",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/api/items/:id",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:24:11 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Mrs. Antonietta DuBuque DVM\",\n        \"seller\": \"Antonia Prosacco\",\n        \"price\": \"909.00\",\n        \"created_at\": \"2023-05-12T14:05:41.000000Z\",\n        \"updated_at\": \"2023-05-12T14:05:41.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "Record Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/api/items/:id",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "300"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:35:47 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Record not found.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"abdalla\",\n    \"email\" : \"abdalla@gmail.com\",\n    \"password\" : \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/auth/signup",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"abdalla\",\n    \"email\" : \"abdalla@gmail.com\",\n    \"password\" : \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/api/auth/signup",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:37:53 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"user created successfully!\",\n    \"user\": {\n        \"name\": \"abdalla\",\n        \"email\": \"abdalla@gmail.com\",\n        \"updated_at\": \"2023-05-12T14:37:53.000000Z\",\n        \"created_at\": \"2023-05-12T14:37:53.000000Z\",\n        \"id\": 2\n    }\n}"
+						},
+						{
+							"name": "Unprocessable Content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"abdalla\",\n \n    \"password\" : \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/api/auth/signup",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:38:03 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"message\": \"missing requirements\",\n    \"data\": [\n        {\n            \"email\": [\n                \"The email field is required.\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/auth/login?email=test@wishlist.com&password=123456789",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@wishlist.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/api/auth/login?email=test@wishlist.com&password=123456789",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test@wishlist.com"
+										},
+										{
+											"key": "password",
+											"value": "123456789"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:38:37 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token_type\": \"bearer\",\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6MzAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY4MzkwMjMxNywiZXhwIjoxNjgzOTA1OTE3LCJuYmYiOjE2ODM5MDIzMTcsImp0aSI6Ilg3dmE1eGR0THdHTjU1M3IiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TczcVFXi-fEqoG-WS1eVuexxRxMWuUMp-8KchkUgjLQ\"\n}"
+						},
+						{
+							"name": "Fail Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/api/auth/login?email=test@wishlist.com&password=123456789s",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test@wishlist.com"
+										},
+										{
+											"key": "password",
+											"value": "123456789s"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:38:51 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Unauthorized\"\n}"
+						},
+						{
+							"name": "Unprocessable content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{local_url}}/api/auth/login?email=test@wishlist.com",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test@wishlist.com"
+										},
+										{
+											"key": "password",
+											"value": "123456789s",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 14:39:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"message\": \"missing requirements\",\n    \"data\": [\n        {\n            \"password\": [\n                \"The password field is required.\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}/auth/logout",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}/api/auth/logout",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 15:32:28 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				},
+				{
+					"name": "RefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}/auth/refresh",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RefreshToken",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}/api/auth/refresh",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"refresh"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 15:30:54 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token_type\": \"bearer\",\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6MzAwMFwvYXBpXC9hdXRoXC9yZWZyZXNoIiwiaWF0IjoxNjgzOTA1NDAwLCJleHAiOjE2ODM5MDkwNTQsIm5iZiI6MTY4MzkwNTQ1NCwianRpIjoiZW5vdVFPMmpoNGVGRFN5ciIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.W37_6jQ8bCHUk45hcQcu_AW_xSADTdakLyPuciHibvI\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}/auth/me",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}/api/auth/me",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 15:30:15 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"test\",\n    \"email\": \"test@wishlist.com\",\n    \"email_verified_at\": \"2023-05-12T14:05:44.000000Z\",\n    \"created_at\": \"2023-05-12T14:05:44.000000Z\",\n    \"updated_at\": \"2023-05-12T14:05:44.000000Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6MzAwMFwvYXBpXC9hdXRoXC9yZWZyZXNoIiwiaWF0IjoxNjgzOTA1OTA4LCJleHAiOjE2ODM5MDk2MDgsIm5iZiI6MTY4MzkwNjAwOCwianRpIjoiZkNobWNxNXhqUGNScENDVyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jqHGSaidqxGM1LxgaOi6hxWIHaoPY0eN7yeYTxzRtHE",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
