@@ -20,6 +20,8 @@
 
 9. RUN `php artisan migrate:fresh --seed`
 
+10. RUN `php artisan test` to make sure items listing working fine.
+
 ## usage
 
 1. open URL `localhost:3000/items` to Show the list of items at the system.
