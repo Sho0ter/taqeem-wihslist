@@ -14,7 +14,7 @@ class ItemFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
+            'name' => $this->faker->word(6),
             'seller' => $this->faker->name(),
             'price' => $this->faker->randomFloat($nbMaxDecimals = NULL, $min = 1, $max = 1000)
         ];
